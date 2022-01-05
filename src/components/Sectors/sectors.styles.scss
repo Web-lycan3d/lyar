@@ -1,0 +1,55 @@
+/** @format */
+$base-color: #1e4384;
+$header-color: #00d29e;
+$span: #979797;
+/** @format */
+@mixin greenheader {
+  position: absolute;
+  top: 1rem;
+  width: 5rem;
+  height: 0.5rem;
+  background-color: $header-color;
+  content: "";
+}
+.sector-container {
+  width: 100%;
+  height: auto;
+}
+.sector-contents {
+  width: 100%;
+  padding: 5% 0;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.sector-details {
+  width: 50%;
+  position: relative;
+  &:before {
+    @include greenheader();
+  }
+
+  .sector-h1 {
+    font-size: 3rem;
+    color: $base-color;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+  }
+  .sector-span {
+    color: $span;
+    letter-spacing: 0.32px;
+    font-size: 1rem;
+    font-family: "Inter", sans-serif;
+    line-height: 1.8;
+  }
+}
+.sector-img {
+  width: 450px;
+  height: 400px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
