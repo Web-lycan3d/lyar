@@ -25,10 +25,10 @@ const PageHeader = () => {
         </div>
         <div className="pageheader-img">
           <img src="https://i.ibb.co/b79pfS8/Mask-Group-22.png" alt="" />
-        </div>{" "}
-        <div className="pageheader-sidebar">
-          <Sidebar />
         </div>
+      </div>
+      <div className="pageheader-sidebar">
+        <Sidebar />
       </div>
     </div>
   );

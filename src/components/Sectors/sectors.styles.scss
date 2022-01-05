@@ -11,6 +11,12 @@ $span: #979797;
   background-color: $header-color;
   content: "";
 }
+@mixin sectorh1 {
+  font-size: 3rem;
+  color: $base-color;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+}
 .sector-container {
   width: 100%;
   height: auto;
@@ -31,10 +37,7 @@ $span: #979797;
   }
 
   .sector-h1 {
-    font-size: 3rem;
-    color: $base-color;
-    font-weight: 700;
-    letter-spacing: 0.8px;
+    @include sectorh1();
   }
   .sector-span {
     color: $span;
@@ -45,11 +48,37 @@ $span: #979797;
   }
 }
 .sector-img {
-  width: 450px;
+  width: 500px;
   height: 400px;
   img {
     width: 100%;
     height: 100%;
     object-fit: contain;
+  }
+}
+
+.sectoradv-container {
+  width: 100%;
+  padding: 6% 0;
+}
+
+.sectoradv-h2 {
+  width: 100%;
+  text-align: center;
+  @include sectorh1();
+  position: relative;
+  padding-top: 0.7rem;
+  &::before {
+    @include greenheader();
+    top: 0;
+  }
+}
+.sectoradv-img {
+  width: 55%;
+  height: 100%;
+  margin: 5% auto;
+  img {
+    width: 100%;
+    height: 100%;
   }
 }
