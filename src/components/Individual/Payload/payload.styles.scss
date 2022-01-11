@@ -1,0 +1,185 @@
+/** @format */
+$base-color: #1e4384;
+$header-color: #00d29e;
+$span: #979797;
+@mixin greenheader {
+  position: absolute;
+  top: 1rem;
+  width: 5rem;
+  height: 0.5rem;
+  background-color: $header-color;
+  content: "";
+}
+.payload-container {
+  width: 100%;
+  height: auto;
+  background-color: black;
+  overflow: hidden;
+}
+.payload-contents {
+  width: 95%;
+  margin: 0 auto;
+  padding: 5% 0;
+}
+.payload-flex-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+
+  gap: 0 3rem;
+  flex-wrap: wrap;
+}
+.payload-h2 {
+  font-size: 50px;
+  font-weight: 500;
+  position: relative;
+  padding-top: 0.8rem;
+  letter-spacing: 0.8px;
+  color: rgb(255, 255, 255);
+  &::before {
+    @include greenheader();
+    top: 0;
+    background-color: $header-color;
+  }
+}
+.payload-item {
+  margin-top: 5%;
+  width: 35rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  .payload-details {
+    width: 100%;
+    p {
+      font-family: "Inter";
+      padding-left: 2rem;
+      color: white;
+      margin: 1.8rem 0;
+      border-left: 2px solid #1e4384;
+      letter-spacing: 0.32px;
+      font-size: 1.1rem;
+      line-height: 1.7;
+      font-weight: 200;
+    }
+  }
+}
+.payload-img {
+  width: 550px;
+  height: 300px;
+  display: flex;
+
+  img {
+    width: 300px;
+    height: 100%;
+  }
+  .payload-img-ptag {
+    align-self: center;
+    font-size: 1.8rem;
+    letter-spacing: 0.48px;
+    color: white;
+    font-weight: 500;
+  }
+}
+
+.sheet-container {
+  width: 100%;
+  height: auto;
+  background-color: black;
+  padding-top: 3%;
+}
+.sheet-h3 {
+  margin: 3%;
+  font-size: 50px;
+  font-weight: 500;
+  position: relative;
+
+  letter-spacing: 0.8px;
+  color: rgb(255, 255, 255);
+  &::before {
+    @include greenheader();
+    top: 0;
+    background-color: $header-color;
+  }
+}
+.sheet-contents {
+  width: 94%;
+  margin: 0 auto;
+  padding: 10% 0;
+  display: flex;
+  justify-content: space-around;
+  background: url("https://i.ibb.co/PNhB3rW/Union-6.png") no-repeat center;
+  background-size: cover;
+}
+.sheet-table {
+  width: 50%;
+  padding: 0.8rem;
+  height: 400px;
+  border: 2px solid #1e4384;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  gap: 0 8rem;
+  .sheet-ptag {
+    color: white;
+    font-weight: 500;
+    letter-spacing: 0.34px;
+    font-size: 21px;
+  }
+  span {
+    display: block;
+    width: 100%;
+    margin: 0.8rem 0;
+    font-weight: 200;
+    color: white;
+    border-bottom: 1px solid white;
+    padding-bottom: 1rem;
+    letter-spacing: 0.99px;
+    font-size: 14px;
+  }
+}
+.sheet-spec {
+  width: 15rem;
+}
+.sheet-table-right {
+  display: flex;
+  flex-direction: column;
+}
+.sheet-img {
+  width: 50%;
+  height: 400px;
+  img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .payload-contents {
+    width: 95%;
+  }
+
+  .payload-item {
+    width: 25rem;
+  }
+  .payload-img {
+    width: 450px;
+    height: 300px;
+    display: flex;
+    justify-content: flex-start;
+    img {
+      width: 350px;
+      height: 100%;
+      object-fit: cover;
+    }
+    .payload-img-ptag {
+      align-self: center;
+      font-size: 1.8rem;
+      letter-spacing: 0.48px;
+      color: white;
+      font-weight: 500;
+    }
+  }
+}

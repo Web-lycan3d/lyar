@@ -11,16 +11,19 @@ const PageHeader = () => {
         <div className="pageheader-details">
           <div className="pageheader-details-flex">
             <h1 className="pageheader-h1">
-              MICRO <br /> <span className="pageheader-span">DRONE</span>
+            AZURE 
             </h1>
             <img src="https://i.ibb.co/Z6gTGcg/Path-107.png" alt="drone png" />
           </div>
           <p className="pageheader-p">
-            Micro drones are small-scale drones carrying payloads such as
-            cameras and sensors. The micro drone enables the user to obtain a
-            bird's eye view of the environment which is helpful in many
-            applications such as environmental monitoring, surveying,
-            surveillance or disaster management.
+            AZURE is a small-scale drone carrying payloads such as cameras and
+            sensors. The micro drone enables the user to obtain a bird's eye
+            view of the environment which is helpful in many applications such
+            as environmental monitoring, surveying, surveillance or disaster
+            management. AZURE provides quick navigation with high-range
+            communication operations. When required, several micro drones can
+            fly in formation over the area of interest and deliver data that is
+            collected, analyzed and delivered to the user in real-time.
           </p>
         </div>
         <div className="pageheader-img">

@@ -1,11 +1,13 @@
 /** @format */
 
 import React from "react";
-import PageCenter from "../components/PageCenter/PageCenter";
-import PageHeader from "../components/PageHeader/PageHeader";
-import Sector from "../components/Sectors/Sector";
-import SectorAdv from "../components/Sectors/SectorAdv";
-import DroneVideo from "../components/Video/DroneVideo";
+import Features from "../components/Individual/Features/Features";
+import PageCenter from "../components/Individual/PageCenter/PageCenter";
+import PageHeader from "../components/Individual/PageHeader/PageHeader";
+import Payload from "../components/Individual/Payload/Payload";
+import Sector from "../components/Individual/Application/Application";
+import SectorAdv from "../components/Individual/Application/ApplicationAdv";
+import DroneVideo from "../components/Individual/Video/DroneVideo";
 
 const MicroDrone = () => {
   return (
@@ -15,6 +17,8 @@ const MicroDrone = () => {
       <PageCenter />
       <SectorAdv />
       <DroneVideo />
+      <Features />
+      <Payload />
     </div>
   );
 };

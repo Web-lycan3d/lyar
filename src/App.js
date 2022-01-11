@@ -6,7 +6,7 @@ import MicroDrone from "./pages/MicroDrone";
 function App() {
   return (
     <div>
-      <MicroDrone />{" "}
+      <MicroDrone />
     </div>
   );
 }
