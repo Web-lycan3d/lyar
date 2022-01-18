@@ -5,7 +5,7 @@ $header-color: #00d29e;
 
 @mixin greenheader {
   position: absolute;
-  top: 1rem;
+  top: 1.5rem;
   width: 5rem;
   height: 0.5rem;
   background-color: $header-color;
@@ -30,10 +30,12 @@ $header-color: #00d29e;
   align-self: center;
 
   .pageheader-details-flex {
+    width: 90%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
+    margin-top: 3rem;
     margin-bottom: 1rem;
     &::before {
       @include greenheader();
@@ -52,13 +54,14 @@ $header-color: #00d29e;
     letter-spacing: 1.22px;
 
     font-size: 3.9rem;
-     
   }
   .pageheader-p {
+    margin-top: 2rem;
     font-size: 1.15rem;
     letter-spacing: 0.37px;
     color: $base-color;
     line-height: 1.5;
+    font-weight: 500;
   }
 }
 .pageheader-img {
@@ -71,6 +74,7 @@ $header-color: #00d29e;
   img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
   }
 }
 .pageheader-sidebar {

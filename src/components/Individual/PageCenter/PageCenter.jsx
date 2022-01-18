@@ -3,16 +3,22 @@
 import React from "react";
 import "./pagecenter.styles.scss";
 
-const PageCenter = () => {
+const PageCenter = ({ pageCenter }) => {
   return (
     <div className="pagecenter-container">
-      <div className="parrallax-bg"></div>
+      <div
+        className="parrallax-bg"
+        style={{
+          background: `url(${pageCenter.bg}) no-repeat center`,
+          backgroundAttachment: "fixed",
+          backgroundSize: "cover",
+        }}></div>
       <div className="pagecenter-text">
-        <p>A compact yet powerful drone.</p>
+        <p>{pageCenter.text}</p>
       </div>
 
       <div className="pagecenter-img">
-        <img src="https://i.ibb.co/mS2VQx9/Mask-Group-11.png" alt="err" />
+        <img src={pageCenter.img} alt="err" />
       </div>
     </div>
   );
