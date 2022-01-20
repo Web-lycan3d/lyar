@@ -1,17 +1,26 @@
 /** @format */
-
+import React from "react";
 import "./App.css";
 import MicroDrone from "./pages/MicroDrone";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import Navbar from "./components/navbar/Navbar";
+import ProductMenu from "./components/PorductMenu/ProductMenu";
+import { AnimatePresence } from "framer-motion";
+
 function App() {
+  const location = useLocation();
+
   return (
-    <BrowserRouter>
+    <React.Fragment>
       <Navbar />
-      <Routes>
-        <Route path="/" element={<MicroDrone />} />
-      </Routes>
-    </BrowserRouter>
+      <AnimatePresence exitBeforeEnter>
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={<MicroDrone />} />
+          <Route path="/product/menu" element={<ProductMenu />} />
+          <Route path="/drone/:id" element={<MicroDrone />} />
+        </Routes>
+      </AnimatePresence>
+    </React.Fragment>
   );
 }
 

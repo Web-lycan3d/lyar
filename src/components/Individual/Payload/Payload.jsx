@@ -11,7 +11,7 @@ const Payload = ({ payload }) => {
           <h2 className="payload-h2">PAYLOAD APPLICATIONS</h2>
           <div className="payload-flex-container">
             {payload.payload_array.map((item) => (
-              <div className="payload-item" key={item.id}>
+              <div className="payload-item" key={item.payload_item_text}>
                 <div className="payload-img">
                   <img src={item.payload_item_img} alt="error" />
                   <p
@@ -25,7 +25,7 @@ const Payload = ({ payload }) => {
                 </div>
                 <div className="payload-details">
                   {item.payload_usage.split(":").map((text) => (
-                    <p>{text}</p>
+                    <p key={text}>{text}</p>
                   ))}
                 </div>
               </div>

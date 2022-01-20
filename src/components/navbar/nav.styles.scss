@@ -10,18 +10,119 @@
 
 .nav-contents {
   width: 35rem;
-  padding: 0.8rem 1rem;
+  padding: 1.5rem;
   height: auto;
   display: flex;
   justify-content: space-around;
   align-items: center;
   background-color: white;
   border: 2px solid #1e4384;
-
+  position: relative;
   .nav-ptag {
-    font-weight: 500;
-    font-size: 0.95rem;
-    color: #033791;
-    letter-spacing: 1.06px;
+    position: relative;
+
+    cursor: pointer;
+    p {
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: #033791;
+      letter-spacing: 1.06px;
+      padding: 0.5rem;
+      margin: 0;
+      transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+      &:hover {
+        color: #033791b4;
+      }
+      &:active {
+        transform: scale(0.95);
+      }
+    }
+
+    .nav-aerial-contents {
+      position: absolute;
+      width: 80%;
+      top: -10rem;
+      transition: all 0.7s ease;
+      background-color: rgb(250, 250, 250);
+      color: #033791;
+      padding: 0.6rem;
+      text-align: center;
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.048);
+      opacity: 0;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+
+        border-top: 0px solid rgba(102, 51, 153, 0);
+        border-right: 0px solid rgba(102, 51, 153, 0);
+        border-bottom: 30px solid #ffffff;
+        border-left: 30px solid rgba(102, 51, 153, 0);
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        border-top: 30px solid #ffffff;
+        border-right: 30px solid #5f4b4b00;
+        border-bottom: 0px solid rgba(248, 248, 248, 0);
+        border-left: 0px solid rgba(102, 51, 153, 0);
+      }
+      .nav-atag {
+        display: block;
+        text-decoration: none;
+        padding: 0.5rem 0;
+        color: #033791;
+        border-bottom: 1px solid #0337918c;
+      }
+      span {
+        display: block;
+        font-size: 0.95rem;
+        letter-spacing: 1.2px;
+        font-weight: 500;
+        transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+
+        &:hover {
+          letter-spacing: 1.8px;
+        }
+        &:active {
+          transform: scale(0.8);
+        }
+      }
+      .nav-atag:last-child {
+        border-bottom: 0;
+      }
+    }
+    .nav-areial-active {
+      opacity: 1;
+      top: 2.8rem;
+    }
   }
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   bottom: 0;
+  //   left: 0;
+
+  //   border-top: 80px solid rgba(170, 148, 148, 0);
+  //   border-right: 0px solid rgba(102, 51, 153, 0);
+  //   border-bottom: 0px solid #d3464600;
+  //   border-left: 80px solid rgb(245, 245, 245);
+  //   z-index: 1;
+  //   clip-path: polygon(0 0, 0% 100%, 100% 100%);
+  // }
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+
+  //   border-top: 30px solid #ffffff;
+  //   border-right: 30px solid #5f4b4b00;
+  //   border-bottom: 0px solid rgba(248, 248, 248, 0);
+  //   border-left: 0px solid rgba(102, 51, 153, 0);
+  // }
 }
