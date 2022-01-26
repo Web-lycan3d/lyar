@@ -1,0 +1,100 @@
+/** @format */
+$header-color: #00d29e;
+
+@mixin greenheader {
+  position: absolute;
+  top: 1.2rem;
+  width: 5rem;
+  height: 0.5rem;
+  background-color: $header-color;
+  content: "";
+}
+.gcs-container {
+  width: 100%;
+  height: auto;
+}
+.gcs-contents {
+  width: 100%;
+  padding: 5% 0;
+  background-color: rgb(182, 182, 182);
+}
+
+.gcs-header {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.gcs-header-details {
+  width: 40%;
+  height: 100%;
+  .gcs-header-details-text {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    h4 {
+      width: 80%;
+      font-size: 2.7rem;
+    }
+    img {
+      width: 100px;
+      height: 100px;
+    }
+  }
+  p {
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.7;
+  }
+}
+.gcs-header-img {
+  width: 50%;
+  height: 100%;
+  background-color: black;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.gcs-benifits {
+  padding: 7% 0;
+  background-color: white;
+}
+.gcs-benifits-contents {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.gcs-benifits-img {
+  width: 50%;
+  height: 90%;
+  img {
+    width: 100%;
+    height: 600px;
+    object-fit: contain;
+  }
+}
+.gcs-benifits-text {
+  width: 50%;
+  color: #033791;
+  .gcs-h5tag {
+    font-size: 2.7rem;
+    margin-bottom: 2rem;
+    position: relative;
+    &::before {
+      @include greenheader();
+      top: -1rem;
+    }
+  }
+  p {
+    margin-top: 0;
+    width: 85%;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.7;
+    letter-spacing: 1.2px;
+  }
+}
