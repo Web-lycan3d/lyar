@@ -8,9 +8,15 @@ const Sidebar = () => {
     <div className="sidebar-container">
       <div className="sidebar-list">
         <ul className="sidebar-ul">
-          <li className="sidebar-li">DEMO</li>
-          <li className="sidebar-li">FEATURES</li>
-          <li className="sidebar-li">SPECIFICATION</li>
+          <li className="sidebar-li">
+            <a href="#demo">DEMO</a>
+          </li>
+          <li className="sidebar-li">
+            <a href="#productfeatures">FEATURES</a>
+          </li>
+          <li className="sidebar-li">
+            <a href="#payload">SPECIFICATION</a>
+          </li>
         </ul>
       </div>
     </div>

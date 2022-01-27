@@ -2,22 +2,29 @@
 
 .navbar-container {
   position: fixed;
-  top: 1.2rem;
+  top: 0.5rem;
   left: 50%;
   transform: translateX(-50%);
   z-index: 200;
 }
-
+.nav-abs {
+  position: absolute;
+  display: flex;
+  bottom: 22%;
+  transform: translateY(-50%);
+  width: 85%;
+  justify-content: space-around;
+}
 .nav-contents {
-  width: 35rem;
+  width: 40rem;
   padding: 1.5rem;
   height: auto;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: white;
-  border: 2px solid #1e4384;
+
   position: relative;
+
   .nav-ptag {
     position: relative;
 

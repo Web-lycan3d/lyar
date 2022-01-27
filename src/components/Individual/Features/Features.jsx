@@ -5,7 +5,7 @@ import "./features.styles.scss";
 
 const Features = ({ features }) => {
   return (
-    <div className="feature-container">
+    <div className="feature-container" id="productfeatures">
       <h1 className="feature-h1">FEATURES</h1>
       <div className="feature-contents">
         <div className="feature-images">

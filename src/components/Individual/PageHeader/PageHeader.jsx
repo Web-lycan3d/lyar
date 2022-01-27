@@ -3,21 +3,42 @@
 import React from "react";
 import Sidebar from "../sidebar/Sidebar";
 import "./pageheader.styles.scss";
+import { motion } from "framer-motion";
 
 const PageHeader = ({ pageHeader }) => {
   return (
     <div className="pageheader-container">
       <div className="pageheader-contents">
-        <div className="pageheader-details">
+        <motion.div
+          initial={{ opacity: 0, x: -15 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1.2 }}
+          className="pageheader-details">
           <div className="pageheader-details-flex">
             <h1 className="pageheader-h1">{pageHeader.name}</h1>
-            <img src={pageHeader.svg} alt="drone png" />
+            <motion.img
+              initial={{ opacity: 0, y: 200 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.2, delay: 0.5 }}
+              src={pageHeader.svg}
+              alt="drone png"
+            />
           </div>
-          <p className="pageheader-p">{pageHeader.text}</p>
-        </div>
-        <div className="pageheader-img">
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1.2, delay: 0.5 }}
+            className="pageheader-p">
+            {pageHeader.text}
+          </motion.p>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1.2, delay: 0.2 }}
+          className="pageheader-img">
           <img src={pageHeader.img} alt="err" />
-        </div>
+        </motion.div>
       </div>
       <div className="pageheader-sidebar">
         <Sidebar />

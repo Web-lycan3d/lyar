@@ -3,6 +3,8 @@ import "./gcs.styles.scss";
 
 import React from "react";
 import Features from "../Individual/Features/Features";
+import Sidebar from "../Individual/sidebar/Sidebar";
+import { motion } from "framer-motion";
 
 const Gcs = () => {
   const gcsData = [
@@ -39,42 +41,7 @@ const Gcs = () => {
           desp: "Ability to loiter around a target area and track specific objects.",
         },
       ],
-      feature_Img:
-        "https://i.ibb.co/5xjMMTr/UAV-Ground-Control-Station-B01-2k.png",
-      specifications: [
-        {
-          item: "MTOW",
-          value: "2kg",
-        },
-        {
-          item: "Cruising Velocity",
-          value: "10m/s",
-        },
-        {
-          item: "Maximum Velocity",
-          value: "13m/s",
-        },
-        {
-          item: "Maximum ceiling height",
-          value: "800m",
-        },
-        {
-          item: "Endurance",
-          value: "25mins",
-        },
-        {
-          item: "Command & Control Range",
-          value: "<10km*",
-        },
-        {
-          item: "Wind resistance",
-          value: "11m/s",
-        },
-        {
-          item: "Temperature resistance",
-          value: "-10 to 50°C",
-        },
-      ],
+      feature_Img: "https://i.ibb.co/3s777KM/Group-10358.png",
     },
   ];
 
@@ -83,22 +50,37 @@ const Gcs = () => {
       <div className="gcs-contents">
         <div className="gcs-header">
           <div className="gcs-header-details">
-            <div className="gcs-header-details-text">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1 }}
+              className="gcs-header-details-text">
               <h4>GROUND CONTROL STATION</h4>
-              <img src="https://i.ibb.co/x1qgrfG/Group-9870.png" alt="" />
-            </div>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. At ullam
-              pariatur officiis blanditiis, quibusdam numquam accusamus, totam
-              aut quaerat consequatur reiciendis, id minima sint nobis libero.
-              Mollitia vitae quidem similique.
-            </p>
+              <img src="https://i.ibb.co/Wy56jRR/Group-9778.png" alt="err" />
+            </motion.div>
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1.2, delay: 0.2 }}>
+              Ground Control Systems (GCS) refers to an integrated rugged
+              solution for controlling drones. Currently, we are developing our
+              own ground control systems that will include software for
+              monitoring and controlling drones remotely through computer
+              systems which includes features like Hands On Throttle and Stick
+              Compatibility, Extended Range, ADSB feature and a feature to
+              control multiple drones/UAV’s that essentially act as an ATC for
+              the aerial systems.
+            </motion.p>
           </div>
-          <div className="gcs-header-img">
-            <img
-              src="https://i.ibb.co/r3m1XDs/UAV-Ground-Control-Station-H03-2k.png"
-              alt=""
-            />
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1.2, delay: 0.4 }}
+            className="gcs-header-img">
+            <img src="https://i.ibb.co/wJMhxRT/Group-10354.png" alt="err" />
+          </motion.div>
+          <div className="gcs-sidebar">
+            <Sidebar />
           </div>
         </div>
       </div>
@@ -130,6 +112,20 @@ const Gcs = () => {
           array: gcsData[0].features,
         }}
       />
+      <div className="gcs-payload-container">
+        <h6 className="gcs-h6tag">HARDWARE SPECIFICATION</h6>
+        <div className="gcs-payload-contents">
+          <div className="gcs-payload-details">
+            <img src="https://i.ibb.co/MByKF0j/Group-10339.png" alt="" />
+          </div>
+          <div className="gcs-payload-img">
+            <img
+              src="https://i.ibb.co/MRhWByN/UAV-Ground-Control-Station-I01-2k.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
