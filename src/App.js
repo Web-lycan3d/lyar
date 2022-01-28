@@ -8,6 +8,8 @@ import ProductMenu from "./components/PorductMenu/ProductMenu";
 import { AnimatePresence } from "framer-motion";
 import Swarm from "./components/Swarm/Swarm";
 import Gcs from "./components/gcs/Gcs";
+import About from "./components/About/About";
+import Contact from "./components/contact/Contact";
 
 function App() {
   const location = useLocation();
@@ -22,6 +24,8 @@ function App() {
           <Route path="/drone/:id" element={<MicroDrone />} />
           <Route path="/swarm" element={<Swarm />} />
           <Route path="/gcs" element={<Gcs />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </AnimatePresence>
     </React.Fragment>
