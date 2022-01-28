@@ -28,7 +28,7 @@ const Swarm = () => {
         </div>
         <div className="swarm-img">
           <img
-            src="https://i.ibb.co/gTQcRKJ/image-placeholder-title.webp"
+            src="https://i.ibb.co/9bPM4Sr/image-placeholder-title-1.webp"
             alt="err"
           />
         </div>

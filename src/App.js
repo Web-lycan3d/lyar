@@ -10,6 +10,7 @@ import Swarm from "./components/Swarm/Swarm";
 import Gcs from "./components/gcs/Gcs";
 import About from "./components/About/About";
 import Contact from "./components/contact/Contact";
+import Footer from "./components/footer/Footer";
 
 function App() {
   const location = useLocation();
@@ -28,6 +29,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </AnimatePresence>
+      <Footer />
     </React.Fragment>
   );
 }
