@@ -2,20 +2,31 @@
 
 import React from "react";
 import "./about.styles.scss";
+import { motion } from "framer-motion";
 
 const About = () => {
   return (
     <div className="about-container">
       <div className="about-contents">
-        <div className="about-text">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 20 }}
+          transition={{ duration: 1.2 }}
+          className="about-text">
           <div className="about-text-details">
             <h3>LYCAN AEROSPACE</h3>
             <p>EXPERIENCE. PRECISION. EXCELLENCE</p>
           </div>
-        </div>
-        <div className="about-header-img">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 500, x: 500 }}
+          animate={{ opacity: 1, y: 0, x: 0 }}
+          exit={{ opacity: 0, y: -500, x: -500 }}
+          transition={{ duration: 2, easings: "anticipate" }}
+          className="about-header-img">
           <img src="https://i.ibb.co/GFHBHhx/Component-49-2.webp" alt="error" />
-        </div>
+        </motion.div>
         <div className="about-footer">
           <div className="about-footer-img">
             <img src="https://i.ibb.co/p4yR08m/Group-10351.webp" alt="" />

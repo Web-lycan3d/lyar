@@ -18,7 +18,7 @@ const ProductMenu = () => {
     if (areial === "true") {
       setImg("https://i.ibb.co/x8nbN5n/Mask-Group-57.png");
     } else {
-      setImg("https://i.ibb.co/K9836Gx/Mask-Group-58.png");
+      setImg("https://i.ibb.co/Kxq9XTZ/Mask-Group-8.png");
     }
   }, [areial]);
 
@@ -70,7 +70,7 @@ const ProductMenu = () => {
                   id: 4,
                   title: "AETOS",
                   content: "A high precision bird's-eye UAV",
-                  img: "https://i.ibb.co/K9836Gx/Mask-Group-58.png",
+                  img: "https://i.ibb.co/Kxq9XTZ/Mask-Group-8.png",
                 }}
                 setImg={setImg}
               />

@@ -3,10 +3,14 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import "./nav.styles.scss";
+import Navdots from "./Navdots";
 
 const Navbar = () => {
   const [areialState, setAreialState] = useState(false);
   const [areialState2, setAreialState2] = useState(false);
+
+  const [menuState, setmenuState] = useState(false);
+
   const navRef = useRef();
 
   useEffect(() => {
@@ -71,8 +75,13 @@ const Navbar = () => {
               </Link>
             </div>
           </div>
-
-          <img src="" alt="logo" className="nav-logo" />
+          <div className="brand-logo">
+            <img
+              src="https://i.ibb.co/2yQd05M/Group-1.webp"
+              alt="logo"
+              className="nav-logo"
+            />
+          </div>
           <div
             className="nav-ptag"
             onClick={() => {
@@ -86,16 +95,20 @@ const Navbar = () => {
                   ? "nav-aerial-contents nav-areial-active"
                   : "nav-aerial-contents"
               }>
-              <Link className="nav-atag" to={"/gcs"}>
+              <Link className="nav-atag" to="/gcs">
                 <span>GCS</span>
               </Link>
-              <Link className="nav-atag" to={"/swarm"}>
+              <Link className="nav-atag" to="/swarm">
                 <span>SWARM</span>
               </Link>
             </div>
           </div>
+          <div className="nav-dots" onClick={() => setmenuState(!menuState)}>
+            <img src="https://i.ibb.co/kStnLBz/Group-9875.png" alt="dots" />
+          </div>
         </div>
       </div>
+      <Navdots menuState={menuState} setmenuState={setmenuState} />
     </div>
   );
 };

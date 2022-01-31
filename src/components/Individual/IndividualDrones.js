@@ -457,7 +457,7 @@ export const individualDrones = [
     pageheaderText:
       "AETOS can carry various payloads and has the longest range over most other aerial systems. It has an electric motor that is battery powered and is flown autonomously. The missions are programmed on the control station and transmitted to the UAV via telemetry. AETOS then takes off from the ground with the help of a catapult and starts its journey. Once airborne, it sweeps through the pre-assigned waypoints, navigating via GPS. Unlike rotors, their wings provide vertical lift which means they only need enough energy to keep moving forward, making them ideal long-range UAVs.",
     pageheadersvgdrone: "https://i.ibb.co/3M1xMc9/Path-107.png",
-    pageheaderImg: "https://i.ibb.co/jvD9FZd/Group-9771.png",
+    pageheaderImg: "https://i.ibb.co/8dcXbdt/Group-9771-1.webp",
     applications: [
       {
         id: 1,
